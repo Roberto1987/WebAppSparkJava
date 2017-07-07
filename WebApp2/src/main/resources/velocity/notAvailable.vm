@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page not availabe</title>
+</head>
+<body>
+<a href="$indexPage">Back to the start.</a>
+<h1> This page is not avaible or doesn't exists</h1>
+</body>
+</html>

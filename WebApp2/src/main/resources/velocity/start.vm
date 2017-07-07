@@ -1,0 +1,66 @@
+<html>
+  <body>
+ <a href="${indexPage}">Back to the start.</a>
+ <table style="width: 75%;" border="3" cellpadding="3">
+   <tbody>
+   <tr>
+     <td>&nbsp;&nbsp;</td>
+     <td>
+         #if($story.getBranches()[0] == "")
+             <form action="\index" method="POST">
+             <input id="leftPiece" type="text" name="topStory" placeholder="Top Story"/>
+             <br>
+             <input id="sendLeftPiece" type="submit" value="Top" />
+             </form>
+         #else
+         <a href="${story.getBranches()[0]}" >${story.getBranches()[0]}</a>
+         #end
+     </td>
+     <td>&nbsp;&nbsp;</td>
+   </tr>
+   <tr>
+     <td>
+         #if($story.getBranches()[1] == "")
+         <form action="\index" method="POST">
+             <input type="text" name="leftStory" placeholder="Left Story"/>
+             <br>
+             <input type="submit" value="Left"/>
+         </form>
+         #else
+         <a  href="${story.getBranches()[1]}">${story.getBranches()[1]}</a>
+         #end
+     </td>
+     <td>&nbsp;${story.getMainText()} &nbsp;</td>
+     <td>
+         #if($story.getBranches()[2] == "")
+         <form action="\index" method="POST">
+             <input type="text" name="rightStory" placeholder="Right Story"/>
+             <br>
+             <input type="submit" value="Right"/>
+         </form>
+         #else
+         <a  href="${story.getBranches()[2]}" >${story.getBranches()[2]}</a>
+         #end
+     </td>
+   </tr>
+   <tr>
+     <td>&nbsp;&nbsp;</td>
+     <td>
+         #if($story.getBranches()[3] == "")
+         <form action="\index" method="POST">
+             <input type="text" name="bottomStory" placeholder="BottomStory"/>
+             <br>
+             <input type="submit" value="Bottom"/>
+         </form>
+         #else
+         <a href="${story.getBranches()[3]}"> ${story.getBranches()[3]} </a>
+         #end
+     </td>
+     <td>&nbsp;&nbsp;</td>
+   </tr>
+   </tbody>
+ </table>
+ </div>
+
+  </body>
+</html>
